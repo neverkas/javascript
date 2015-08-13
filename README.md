@@ -1,1 +1,4 @@
-# javascript
+# Buenas prácticas
+
+Con javascript
+
