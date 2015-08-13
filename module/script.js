@@ -1,44 +1,44 @@
-var Receta = (function(){
-	this.ingredientes, this.pasos = {};
+var Recipe = (function(){
+	this.ingredients, this.steps = {};
 
 	function message(value){
 		console.log(value);
 	}
 
-	function setIngredientes(value){
-		this.ingredientes = value;		
+	function setIngredients(value){
+		this.ingredients = value;		
 	}
 
-	function getIngredientes(){
-		message(this.ingredientes.join(", "));
+	function getIngredients(){
+		message(this.ingredients.join(", "));
 	}
 
-	function setPasos(value){
-		this.pasos = value;		
+	function setSteps(value){
+		this.steps = value;		
 	}
 
-	function getPasos(){
-		message(this.pasos.join(", "));
+	function getSteps(){
+		message(this.steps.join(", "));
 	}
 
 	return {
-		ingredientes: setIngredientes,
-		verIngredientes: getIngredientes,
+		ingredients: setIngredients,
+		showIngredients: getIngredients,
 
-		pasos: setPasos,
-		verPasos: getPasos,
+		steps: setSteps,
+		showSteps: getSteps,
 
-		mensaje: message,
+		message: message,
 	}
 })();
 
-Receta.ingredientes(['Zanahorias', 'Huevos']);
-Receta.pasos(['Lavar', 'Pelar', 'Cocinar', 'Servir']);
+Recipe.ingredients(['Carrots', 'Eggs']);
+Recipe.steps(['peel', 'chop', 'cook']);
 
-Receta.mensaje('Los ingredientes son: ');
-Receta.verIngredientes();
+Recipe.message('The ingredients are: ');
+Recipe.showIngredients();
 
-Receta.mensaje('Los pasos a seguir son: ');
-Receta.verPasos();
+Recipe.message('The steps are: ');
+Recipe.showSteps();
 
 
