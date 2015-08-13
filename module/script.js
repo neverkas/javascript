@@ -21,12 +21,18 @@ var Recipe = (function(){
 		message(this.steps.join(", "));
 	}
 
+	function getJSON(){
+		message(this);
+	}
+
 	return {
 		ingredients: setIngredients,
 		showIngredients: getIngredients,
 
 		steps: setSteps,
 		showSteps: getSteps,
+
+		json: getJSON,
 
 		message: message,
 	}
@@ -37,8 +43,9 @@ Recipe.steps(['peel', 'chop', 'cook']);
 
 Recipe.message('The ingredients are: ');
 Recipe.showIngredients();
-
 Recipe.message('The steps are: ');
 Recipe.showSteps();
+
+//Recipe.json();
 
 
