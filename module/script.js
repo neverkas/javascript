@@ -1,8 +1,12 @@
 var Recipe = (function(){
 	this.ingredients, this.steps = {};
 
-	function message(value){
-		console.log(value);
+	function message(value, getTag){
+		tag = (getTag) ? getTag : "p";
+
+		if(value){
+			document.write("<"+ tag +">"+ value + "</"+ tag +">");
+		}
 	}
 
 	function setIngredients(value){
@@ -22,7 +26,7 @@ var Recipe = (function(){
 	}
 
 	function getJSON(){
-		message(this);
+		message(JSON.stringify(this));
 	}
 
 	return {
@@ -41,11 +45,13 @@ var Recipe = (function(){
 Recipe.ingredients(['Carrots', 'Eggs']);
 Recipe.steps(['peel', 'chop', 'cook']);
 
-Recipe.message('The ingredients are: ');
+Recipe.message('The ingredients are: ', 'h3');
 Recipe.showIngredients();
-Recipe.message('The steps are: ');
+Recipe.message('The steps are: ', 'h3');
 Recipe.showSteps();
 
-//Recipe.json();
+Recipe.message('JSON: ', 'h3');
+Recipe.message(Recipe.json());
+
 
 
