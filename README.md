@@ -1,4 +1,5 @@
-# Buenas prácticas
+# Javascript Patterns 
+#
+# Programming in the Kitchen..! :)
 
-Con javascript
 
